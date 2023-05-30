@@ -19,7 +19,7 @@ const Navbar = () => {
             <div className="hidden sm:block sm:ml-6">
               <div className='flex space-x-4'>
                 <Link href="/" className="text-white px-3 py-2 text-sm font-medium">HOME</Link>
-                <Link href="/" className="text-white px-3 py-2 text-sm font-medium">PERSONAJES</Link>
+                <Link href="/characters" className="text-white px-3 py-2 text-sm font-medium">PERSONAJES</Link>
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ const NavStyled = styled.nav`
   height: 116px;
   border-bottom: #3C3C41 1px solid;
   .font-medium{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Cinzel', serif;
   }
   .h-16{
     height: 7.25rem;
