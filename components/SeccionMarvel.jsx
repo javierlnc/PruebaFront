@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const SeccionMarvel = () => {
   return (
-    <Container className="relative flex gap-20 m-6 px-8 justify-between">
+    <Container className="relative flex gap-20 justify-between">
         <InfoContainer className="ProgressBar flex justify-center">
             <Titulo>PROGRESO DE PELICULAS PRODUCIDAS</Titulo>
         </InfoContainer>
@@ -16,6 +16,7 @@ const SeccionMarvel = () => {
 const Container = styled.section`
     height: 30%;
     width: 100%;
+    margin-top: 1.5rem;
     .ProgressBar{
         width: 510px;
     }

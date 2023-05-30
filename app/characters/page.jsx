@@ -1,11 +1,13 @@
-"use client"
+"use client";
 import SeccionMarvel from "@components/SeccionMarvel";
-import {useState, useEffect} from 'react';
+import  SliderCard  from "@components/SliderCard";
 
-const Characters=()=> {
+const Characters = () => {
   return (
-    <SeccionMarvel/>
-  )
-}
-
+    <div className="container">
+      <SeccionMarvel />
+      <SliderCard></SliderCard>
+    </div>
+  );
+};
 export default Characters;
