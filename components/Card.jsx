@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
 
-const Card = () => {
+const Card = ({characters}) => {
   return (
     <CardContainer className="carusel-item">
       <CardTitle>
         <img src ="./assets/FormaCard.png" alt="Forma Decorativa"/>
-        <h2>Nombre</h2>
+        <h2>{characters.name}</h2>
         <img src = "./assets/FormaCard.png" alt="Forma Decorativa"/>
       </CardTitle>
-
+      <ImgCard>
+        <img src={`${characters.thumbnail.path}.${characters.thumbnail.extension}`} alt="imagen del personaje"/>
+      </ImgCard>
       <InfoCard>
         <p>Comics:</p>
-        <p>12</p>
+        <p>{characters.comics.available}</p>
       </InfoCard> 
       <InfoCard>
         <p>Peliculas:</p>

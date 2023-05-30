@@ -1,6 +1,7 @@
 "use client";
 import styled from "styled-components";
 import Card from "@/components/Card";
+import {useEffect, useState} from "react";
 
 const SliderCard = () => {
   const scrollLeft = () =>{
@@ -10,19 +11,23 @@ const SliderCard = () => {
   const scrollRight = () =>{
     document.getElementById("contentCard").scrollLeft += 1400;
   }
+  const [characters, setcharacters] = useState([])
+  const API = 'http://gateway.marvel.com/v1/public/characters?ts=1&apikey=6c8f083d369a7664a55b4407a644ee0c&hash=17f8ea5633e145636fa8299222617300';
+  const fetchCharacters = (API)=>{
+    fetch(API)
+    .then(response => response.json())
+    .then(data => setcharacters(data.data.results))
+    .catch(error => console.log(error));
+  };
+  useEffect(()=>{
+    fetchCharacters(API);
+  } )
   return (
     <Container>
       <CaruselContainer id="contentCard" className="carousel flex p-4 items-center justify-start  gap-4 overflow-x-auto  px-8 relative rounded-box w-4 scrollbar-hide">
-        <Card className="rounded-box"></Card>
-        <Card className="rounded-box"></Card>
-        <Card className="rounded-box"></Card>
-        <Card className="rounded-box"></Card>
-        <Card className="rounded-box"></Card>
-        <Card className="rounded-box"></Card>
-        <Card className="rounded-box"></Card>
-        <Card className="rounded-box"></Card>
-        <Card className="rounded-box"></Card>
-        <Card className="rounded-box"></Card>
+      {characters.map(character => (
+          <Card className="rounded-box" key={character.id} characters={character}/>
+        ))}
       </CaruselContainer>
       <ButtonContainer>
         <button className="p-1" onClick={scrollLeft}>
