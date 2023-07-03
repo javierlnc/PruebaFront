@@ -1,5 +1,5 @@
 "use client";
-import SectionMarvel from "@components/SectionMarvel";
+import SectionMarvel from "@components/SeccionMarvel";
 import  SliderCard  from "@components/SliderCard";
 
 const Characters = () => {
