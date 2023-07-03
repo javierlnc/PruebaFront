@@ -1,11 +1,11 @@
 "use client";
-import SeccionMarvel from "@components/SeccionMarvel";
+import SectionMarvel from "@components/SectionMarvel";
 import  SliderCard  from "@components/SliderCard";
 
 const Characters = () => {
   return (
     <div className="container">
-      <SeccionMarvel />
+      <SectionMarvel />
       <SliderCard></SliderCard>
     </div>
   );

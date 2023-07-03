@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-const SeccionMarvel = () => {
+const SectionMarvel = () => {
   return (
     <Container className="relative flex gap-20 justify-between">
         <InfoContainer className="ProgressBar flex justify-center">
-            <Titulo>PROGRESO DE PELICULAS PRODUCIDAS</Titulo>
+            <Tittle>PROGRESO DE PELICULAS PRODUCIDAS</Tittle>
             <div className="flex flex-col justify-center mt-6 mb-6 gap-2">
             <div className="text-right upperText">
                 <p>23 Películas</p>
@@ -35,7 +35,6 @@ const Container = styled.section`
     }
     .VideoMovie{
         width: 380px;
-       
     }
     .VideoMovie video{
             width: 100%;
@@ -71,7 +70,7 @@ const InfoContainer = styled.div`
         color: #1DA5B4;
     }
 `;
-const Titulo = styled.h3`
+const Tittle = styled.h3`
     font-size: 18px;
     font-weight: 400;
     color: #F0E6D2;
@@ -88,7 +87,7 @@ const ProgressBar = styled.div`
     margin: auto;
     transform: skew(20deg);
     -webkit-transform: skew(-20deg); 
-     -moz-transform: skew(-20deg); 
-     -o-transform: skew(-20deg); 
+    -moz-transform: skew(-20deg); 
+    -o-transform: skew(-20deg); 
 `;
-export default SeccionMarvel
+export default SectionMarvel

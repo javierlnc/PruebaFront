@@ -11,12 +11,12 @@ const SliderCard = () => {
   const scrollRight = () =>{
     document.getElementById("contentCard").scrollLeft += 1400;
   }
-  const [characters, setcharacters] = useState([])
+  const [characters, setCharacters] = useState([])
   const API = 'http://gateway.marvel.com/v1/public/characters?ts=1&apikey=6c8f083d369a7664a55b4407a644ee0c&hash=17f8ea5633e145636fa8299222617300';
   const fetchCharacters = (API)=>{
     fetch(API)
     .then(response => response.json())
-    .then(data => setcharacters(data.data.results))
+    .then(data => setCharacters(data.data.results))
     .catch(error => console.log(error));
   };
   useEffect(()=>{
@@ -24,11 +24,11 @@ const SliderCard = () => {
   } )
   return (
     <Container>
-      <CaruselContainer id="contentCard" className="carousel flex p-4 items-center justify-start  gap-4 overflow-x-auto  px-8 relative rounded-box w-4 scrollbar-hide">
+      <CarouselContainer id="contentCard" className="carousel flex p-4 items-center justify-start  gap-4 overflow-x-auto  px-8 relative rounded-box w-4 scrollbar-hide">
       {characters.map(character => (
           <Card className="rounded-box" key={character.id} characters={character}/>
         ))}
-      </CaruselContainer>
+      </CarouselContainer>
       <ButtonContainer>
         <button className="p-1" onClick={scrollLeft}>
           <svg
@@ -70,7 +70,7 @@ const SliderCard = () => {
 const Container = styled.div`
   position: relative;
 `;
-const CaruselContainer = styled.div`
+const CarouselContainer = styled.div`
   width: 100%;
   height: 70%;
 `;
